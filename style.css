@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    height: 100vh;
+    background: #852d91; 
+    background: linear-gradient(to right,  #852d91 0%,#312a6c 99%);
+}
+
+.container{
+    position: relative;
+    max-width: 800px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.adicionar{
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+}
+
+.adicionar > input[type="text"]{
+    width: 90%;
+    color: #fff;
+    border: none;
+    border-bottom: 2px solid #666;
+    outline: none;
+    background: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.adicionar > input[type="text"]::placeholder{
+    color: #fff;
+}
+
+.adicionar button{
+    margin: 0 10px;
+    background: #222;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.adicionar button:hover{
+    background-color: #095827de;
+}
+
+.adicionar button:active{
+    background-color: #095827;
+}
+
+.pendente, .concluido{
+    margin: 8px 0;
+    padding: 20px;
+}
+
+h3{
+    font-size: 28px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+ol{
+    list-style: none;
+    counter-reset: my-counter;
+}
+
+ol li{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0;
+    background-color: #ed1c24;
+    font-size: 22px;
+    counter-increment: my-counter;
+}
+
+ol.concluido li{
+    background-color: rgb(14, 233, 87);
+}
+
+ol li::before{
+    content: counter(my-counter);
+    background-color: rgba(14, 26, 194, 0.801);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 2rem;
+    text-align: center;
+    color: #fff;
+    margin-right: 0.5rem;
+}
+
+li button{
+    float: right;
+    padding: 5px;
+    font-size: 28px;
+    line-height: 28px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
